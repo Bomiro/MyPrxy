@@ -1,8 +1,8 @@
-import express from 'express';
-import httpProxy from 'http-proxy';
-import fs from 'fs'
-import bodyParser from 'body-parser'
-import path from 'path'
+const express = require('express');
+const httpProxy = require('http-proxy');
+const fs = require('fs');
+const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 8080
