@@ -29,6 +29,7 @@ const writeDatabase = (data) => {
 
 // تقديم الصفحة الرئيسية (HTML) عند الوصول إلى '/'
 app.get('/', (req, res) => {
+  const {apikey} = req.query
   const html = `
   <!DOCTYPE html>
 <html lang="en">
@@ -257,7 +258,11 @@ footer {
 </body>
 </html>
 `;
+  if (apikey === "edit") {
   res.send(html);
+  } else {
+  res.send("<h1>Hello World!</h1>")
+  }
 });
 
 app.get('/get-urls', (req, res) => {
